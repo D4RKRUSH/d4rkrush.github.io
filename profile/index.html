@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="image/pfp.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <div class="profile-card">
+      <img src="image/pfp.png" alt="Profile Picture" class="profile-picture">
+      <div id="userName">
+        Darkrush <i class="fa fa-crown" title="Staff" aria-hidden="false"></i> <i class="fa fa-terminal" title="Developer"></i> <i class="fa fa-bug" title="Bug Hunter"></i>
+</div>
+<div id="displayName">
+        @darkrush 
+</div>
+    <p class="profile-bio"></p>
+  </ul>
+</div>   
+    <div id="links">
+      <a class="link" href="https://github.com/D4RKRUSH" title="Github" target="_blank">
+        <i class="fab fa-github">&nbsp;</i>Github
+      </a>
+      <a class="link" href="https://t.me/tracy0792" title="Telegram" target="_blank">
+        <i class="fab fa-telegram">&nbsp;</i>Telegram
+    </a>
+    <a>
+      <a class="link" href="https://t.me/tracy0792" title="Telegram" target="_blank">
+        <i class="fab fa-telegram">&nbsp;</i>Telegram
+    </a>
+    <a class="link" href="https://t.me/tracy0792" title="SoundCloud" target="_blank">
+      <i class="fab fa-soundcloud">&nbsp;</i>SoundCloud
+  </a>
+    </div>
+
+    <div id="hashtag">
+      #vuq.lol
+    </div>
+  </body>
+</html>
+
+<script>
+  function getRandomItem(arr) {
+const randomIndex = Math.floor(Math.random() * arr.length);
+
+const item = arr[randomIndex];
+
+return item;
+}
+
+const array = ['vuq.lol'];
+setInterval(function() {
+const result = getRandomItem(array);
+document.title = result;
+}, 1000);
+  setInterval(function() {
+    document.title = item
+  }, 1000); // 1000 milliseconds = 1 second
+</script>
+

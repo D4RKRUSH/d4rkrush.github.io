@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Account Terminated</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <h1>Account Terminated</h1>
+        <p>Your account has been terminated by <span id="container-terminated-by"></span></p>
+        <p>Your IP address is <span id="container-ip-address"></span></p>
+        <p>The reason for termination is <span id="container-termination-reason"></span></p>
+        <button>Contact Support</button>
+      </div>
+    </div>
+    <script>
+      window.addEventListener('load', () => {
+        const ipAddressElement = document.getElementById('container-ip-address');
+        fetch('https://api.ipify.org?format=json')
+          .then(response => response.json())
+          .then(data => {
+            const ipAddress = data.ip;
+            ipAddressElement.textContent = `Your IP address is: ${ipAddress}`;
+            
+            const terminatedBy = "Staffs";
+            const terminationReason = "Violation of Terms of Service";
+            
+            const terminatedByElement = document.getElementById("container-terminated-by");
+            const terminationReasonElement = document.getElementById("container-termination-reason");
+            
+            terminatedByElement.textContent = terminatedBy;
+            terminationReasonElement.textContent = terminationReason;
+          })
+          .catch(error => console.error(error));
+      });
+    </script>      
+  </body>
+</html>
